@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Customize configuration
+dans le fichier '.env' changer la variable  VUE_APP_API_URL par l'host du serveur
