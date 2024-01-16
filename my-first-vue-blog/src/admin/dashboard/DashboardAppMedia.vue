@@ -61,7 +61,7 @@ export default {
   methods:{
     addMedia(message){
 
-        axios.get("${this.apiUrl}/api/media/create").then((response) => {
+        axios.get(`${this.apiUrl}/api/media/create`).then((response) => {
         this.statusIndexMedia = 0;
         this.statusEditMedia = 0;
         this.statusAddMedia = message;

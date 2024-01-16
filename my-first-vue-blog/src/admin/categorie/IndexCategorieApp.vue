@@ -76,7 +76,7 @@ export default {
         //searching: true, 
         order: [[1, 'asc']],
         ajax: {
-          url: '${this.apiUrl}/api/categorie', // URL de l'API pour récupérer les données
+          url: `${this.apiUrl}/api/categorie`, // URL de l'API pour récupérer les données
            datasrc: "data"// Chemin vers les données dans la réponse de l'API
         },
         columns: [
@@ -95,7 +95,7 @@ export default {
       }
     },
       fetchCategories() {
-    axios.get("${this.apiUrl}/api/categorie").then((response) => {
+    axios.get(`${this.apiUrl}/api/categorie`).then((response) => {
       
       this.dataTable.clear().rows.add(response.data).draw();
     });
@@ -141,7 +141,7 @@ export default {
   fetchUser() {
       const token = localStorage.getItem('access_token');
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-      axios.get('${this.apiUrl}/api/user/connected') // Appel de la route API pour récupérer l'utilisateur
+      axios.get(`${this.apiUrl}/api/user/connected`) // Appel de la route API pour récupérer l'utilisateur
         .then(response => {
           this.user = response.data; // Mettez à jour la propriété user avec les informations de l'utilisateur
             console.log(this.user)

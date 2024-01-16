@@ -77,7 +77,7 @@ export default {
       event.preventDefault(); // Empêche la soumission du formulaire par défaut
       const submitBtn = document.getElementById('btnAddUser');
       submitBtn.disabled = true;
-        await axios.post('${this.apiUrl}/api/register', this.formData).then((response) => {
+        await axios.post(`${this.apiUrl}/api/register`, this.formData).then((response) => {
             console.log(response);
             if(response.data.success == 1){
               // Stockez le token d'accès dans le localStorage ou un cookie

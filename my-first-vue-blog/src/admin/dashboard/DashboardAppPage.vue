@@ -61,7 +61,7 @@ export default {
   methods:{
     addPage(message){
 
-        axios.get("${this.apiUrl}/api/page/create").then((response) => {
+        axios.get(`${this.apiUrl}/api/page/create`).then((response) => {
       
           this.dataAddPage = response.data;
           this.statusIndexPage = 0;

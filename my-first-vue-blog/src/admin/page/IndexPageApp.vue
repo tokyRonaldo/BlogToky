@@ -73,7 +73,7 @@ export default {
         //searching: true, 
         order: [[1, 'asc']],
         ajax: {
-          url: '${this.apiUrl}/api/page', // URL de l'API pour récupérer les données
+          url: `${this.apiUrl}/api/page`, // URL de l'API pour récupérer les données
            datasrc: "data"// Chemin vers les données dans la réponse de l'API
         },
         columns: [
@@ -94,7 +94,7 @@ export default {
       }
     },
       fetchArticles() {
-    axios.get("${this.apiUrl}/api/page").then((response) => {
+    axios.get(`${this.apiUrl}/api/page`).then((response) => {
       
       this.dataTable.clear().rows.add(response.data).draw();
     });
@@ -141,7 +141,7 @@ export default {
     
   },
   CheckEmptyPage(){
-      axios.get("${this.apiUrl}/api/page/checkPage").then((response) => {
+      axios.get(`${this.apiUrl}/api/page/checkPage`).then((response) => {
       if(response.data.page.length == 0){
         this.ifEmptyPage = 1;
       }

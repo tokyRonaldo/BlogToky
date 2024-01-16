@@ -146,7 +146,7 @@ export default {
 
     fetchUser() {
       axios.defaults.headers.common['Authorization'] = `Bearer ${this.accessToken}`;
-      axios.get('${this.apiUrl}/api/user/connected') // Appel de la route API pour récupérer l'utilisateur
+      axios.get(`${this.apiUrl}/api/user/connected`) // Appel de la route API pour récupérer l'utilisateur
         .then(response => {
           this.user = response.data; // Mettez à jour la propriété user avec les informations de l'utilisateur
             console.log(this.user)

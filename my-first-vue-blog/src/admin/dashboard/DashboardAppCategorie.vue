@@ -60,7 +60,7 @@ export default {
   },
   methods:{
     addCategorie(message){
-        axios.get("${this.apiUrl}/api/categorie/create").then((response) => {
+        axios.get(`${this.apiUrl}/api/categorie/create`).then((response) => {
         this.dataAddCategorie = response.data;
         this.statusIndexCategorie = 0;
         this.statusEditCategorie = 0;

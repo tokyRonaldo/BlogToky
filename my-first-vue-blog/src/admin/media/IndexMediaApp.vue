@@ -68,7 +68,7 @@ export default {
         //searching: true, 
         order: [[1, 'asc']],
         ajax: {
-          url: '${this.apiUrl}/api/media', // URL de l'API pour récupérer les données
+          url: `${this.apiUrl}/api/media`, // URL de l'API pour récupérer les données
            datasrc: "data"// Chemin vers les données dans la réponse de l'API
         },
         columns: [
@@ -86,7 +86,7 @@ export default {
       }
     },
       fetchArticles() {
-    axios.get("${this.apiUrl}/api/media").then((response) => {
+    axios.get(`${this.apiUrl}/api/media`).then((response) => {
       
       this.dataTable.clear().rows.add(response.data).draw();
     });

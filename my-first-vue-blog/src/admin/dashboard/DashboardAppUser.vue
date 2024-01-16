@@ -61,7 +61,7 @@ export default {
   },
   methods:{
     addUser(message){
-      axios.get("${this.apiUrl}/api/user/create").then((response) => {
+      axios.get(`${this.apiUrl}/api/user/create`).then((response) => {
       
       this.dataAddUser = response.data;
       this.statusAddUser = message;

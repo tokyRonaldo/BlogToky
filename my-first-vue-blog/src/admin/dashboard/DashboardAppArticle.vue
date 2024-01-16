@@ -61,7 +61,7 @@ export default {
   },
   methods:{
     addArticle(message){
-        axios.get("${this.apiUrl}/api/article/create").then((response) => {
+        axios.get(`${this.apiUrl}/api/article/create`).then((response) => {
           this.dataAddArticle = response.data;
           this.statusIndexArticle = 0;
           this.statusAddArticle = message;
@@ -81,7 +81,7 @@ export default {
         });
 
         //const self = this;
-        //await $.post("${this.apiUrl}/api/article/edit", 
+        //await $.post(`${this.apiUrl}/api/article/edit`, 
         //                {
         //                    id: id
         //                }, function (data) {
